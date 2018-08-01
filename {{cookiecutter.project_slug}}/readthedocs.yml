@@ -1,9 +1,5 @@
 formats:
     - none
-{% if cookiecutter.environment_manager == 'conda' %}
-conda:
-    file: docs/rtd_environment.yml
-{%endif %}
 build:
     image: latest
 python:

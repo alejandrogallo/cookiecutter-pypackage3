@@ -1,15 +1,14 @@
 {
-  "full_name": "Michael Goerz",
-  "email": "mail@michaelgoerz.net",
-  "github_username": "goerz",
+  "full_name": "Alejandro Gallo",
+  "email": "aamsgallo@gmail.com",
+  "github_username": "alejandrogallo",
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
   "version": "0.1.0",
   "create_author_file": "y",
-  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3"],
-  "environment_manager": ["conda"],
-  "conda_packages": "pytest pytest-cov pytest-xdist coverage sphinx sphinx_rtd_theme ipython pep8 flake8 wheel",
+  "open_source_license": ["GNU General Public License v3", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0"],
+  "environment_manager": "tox",
   "on_pypi": "y",
   "travisci": "y",
   "coveralls": "y",
@@ -19,6 +18,6 @@
   "support_py34": "n",
   "support_py35": "y",
   "support_py36": "y",
-  "use_git_flow": "n",
+  "use_click": "y",
   "interactive_postsetup": "y"
 }

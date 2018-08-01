@@ -24,7 +24,7 @@ try:
 except OSError:
     history = ''
 
-requirements = []
+requirements = [{% if 'y' in cookiecutter.use_click %}'Click'{% endif %}]
 
 dev_requirements = [
     'coverage', 'pytest', 'pytest-cov', 'pytest-xdist', 'twine', 'pep8',
@@ -65,6 +65,13 @@ setup(
 {%- endif %}
     ],
     description="{{ cookiecutter.project_short_description }}",
+{%- if 'y' in cookiecutter.use_click %}
+    entry_points=dict(
+        console_scripts=[
+            '{{cookiecutter.project_slug}}={{cookiecutter.project_slug}}:main'
+        ]
+    ),
+{%- endif %}
     install_requires=requirements,
     extras_require={
         'dev': dev_requirements,

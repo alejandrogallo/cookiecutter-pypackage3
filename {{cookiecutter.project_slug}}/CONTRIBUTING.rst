@@ -70,42 +70,7 @@ The project contains a ``Makefile`` to help with development tasts. In your chec
 
 to see the available make targets.
 
-{% if cookiecutter.environment_manager == 'conda' %}
-It is strongly recommended that you use the conda_ package manager. The
-``Makefile`` relies on conda to create local testing and documentation building
-environements (``make test`` and ``make docs``).
-
-Alternatively, you may  use ``make develop-test`` and ``make develop-docs`` to
-run the tests or generate the documentation within your active Python
-environment. You will have to ensure that all the necessary dependencies are
-installed. Also, you will not be able to test the package against all supported
-Python versions.
-
-{%- if cookiecutter.travisci == 'y' %}
-You still can (and should) look at https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/ to check that your commits pass all tests.
 {%endif %}
-
-.. _conda: https://conda.io/docs/
-{%endif %}
-
-{% if cookiecutter.use_git_flow == 'y' %}
-Branching Model
----------------
-
-{{ cookiecutter.project_name }} uses the `git-flow`_ branching model. That is, the ``develop`` branch takes the role of ``master`` in the `Git Workflow Notes`_.
-
-In order to create topic branches with ``git flow``, after cloning the  ``{{ cookiecutter.project_slug }}`` repository, you should initialize it as follows:
-
-.. code-block:: console
-
-    $ git checkout master
-    $ git flow init
-    $ git checkout develop
-
-.. _git-flow: https://github.com/nvie/gitflow#git-flow
-.. _Git Workflow Notes: https://www.asmeurer.com/git-workflow/
-{% endif -%}
-.. _Aaron Meurer's Git Workflow Notes:  https://www.asmeurer.com/git-workflow/
 
 Pull Request Guidelines
 -----------------------
