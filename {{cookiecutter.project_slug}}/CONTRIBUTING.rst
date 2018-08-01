@@ -49,8 +49,6 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Follow `Aaron Meurer's Git Workflow Notes`_ (with ``{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}`` instead of ``sympy/sympy``)
-
 In short,
 
 1. Clone the repository from ``git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git``
