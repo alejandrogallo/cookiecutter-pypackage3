@@ -3,7 +3,6 @@ graft src
 include AUTHORS.rst
 {% endif -%}
 include CONTRIBUTING.rst
-include HISTORY.rst
 include LICENSE
 include README.rst
 
