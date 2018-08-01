@@ -3,10 +3,6 @@ channels:
   - defaults
 dependencies:
   - python={%if cookiecutter.support_py36 == 'y' %}3.6{% elif cookiecutter.support_py35 == 'y' %}3.5{% elif cookiecutter.support_py34 == 'y' %}3.4{% else %}3{% endif %}
-{%- set pkg_list = cookiecutter.conda_packages.split() -%}
-{%- for pkg in pkg_list %}
-  - {{ pkg }}
-{%- endfor %}
 {%- if cookiecutter.better_apidoc == 'y' %}
   - pip:
       - better-apidoc

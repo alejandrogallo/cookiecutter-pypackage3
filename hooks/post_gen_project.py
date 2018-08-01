@@ -40,24 +40,6 @@ if __name__ == '__main__':
                     response = input(
                         "You do not have git installed. Please install it now "
                         "and press Enter to continue.")
-                if '{{ cookiecutter.use_git_flow }}' == 'y':
-                    print(
-                        "During the project setup, you indicated that you "
-                        "want to use the git-flow branching model. This will "
-                        "now be set up.")
-                    print("Checking the git flow version...")
-                    ret = call(['git', 'flow', 'version'])
-                    if ret != 0:
-                        response = input(
-                            "You do not have 'git flow' installed. Please "
-                            "install it now and press Enter to continue.")
-                    check_call(['git', 'init'])
-                    check_call([
-                        'git', 'commit', '--allow-empty', '-m',
-                        "git-flow initialization"])
-                    check_call(['git', 'flow', 'init'])
-                    print("Done initializing git-flow. A commit was created:")
-                    check_call(['git', 'log'])
                 else:
                     check_call(['git', 'init'])
                 git_remote = (

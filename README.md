@@ -20,7 +20,6 @@ Features
 * Support for [Coveralls](http://coveralls.io)
 * Upload to [PyPI](https://pypi.org) through `make release`
 * Github templates for bug reports
-* Support for git-flow branching model
 * Interactive post-setup script for initializing git
 
 
@@ -60,7 +59,6 @@ Variables
 * `support_py34`: Does the package support Python 3.4?
 * `support_py35`: Does the package support Python 3.5?
 * `support_py36`: Does the package support Python 3.6?
-* `use_git_flow`: Whether the project uses the [git-flow branching model](https://github.com/nvie/gitflow#git-flow)
 * `interactive_postsetup`: Whether to run the interactive post-setup script, which will e.g. set up git for the project
 
 
@@ -90,8 +88,6 @@ After you generate a new project from the cookiecutter template, you should do t
 *   Review the custom RTD templates in `docs/_templates`
 
 *   If you didn't do so during project creation, initialize git and push the project to Github
-
-*   If you are using the git-flow branching model, you *must* configure this on Github. Go to the "Settings" for the project, then "Branches", and switch the "Default branch" from "master", to "develop". You may consider protecting the master branch.
 
 *   Activate Travis CI. The easiest way to do this is to click on the `build|unknown` badge in the README on Github
 

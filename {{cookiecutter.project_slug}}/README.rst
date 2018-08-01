@@ -15,9 +15,9 @@
 {%- endif %}
 
 {%- if cookiecutter.coveralls == 'y' %}
-.. image:: https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/badge.svg?branch={%- if cookiecutter.use_git_flow == 'y' -%}develop{%- else -%}master{%- endif -%}
+.. image:: https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/badge.svg?branch=master
    :alt: Coveralls
-   :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch={%- if cookiecutter.use_git_flow == 'y' -%}develop{%- else -%}master{%- endif -%}
+   :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
 {%- endif %}
 
 {%- if cookiecutter.readthedocs == 'y' %}
@@ -76,7 +76,7 @@ To install the latest development version of {{ cookiecutter.project_name }} fro
 
 .. code-block:: console
 
-    $ pip install git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git@{%- if cookiecutter.use_git_flow == 'y' -%}develop{%- else -%}master{%- endif -%}#egg={{ cookiecutter.project_slug }}
+    $ pip install git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git@master#egg={{ cookiecutter.project_slug }}
 
 {%- if cookiecutter.on_pypi == 'n' %}
 Note that {{ cookiecutter.project_name }} is currently not released on the `Python Package Index`_, hence you will not be able to install it with ``pip install {{ cookiecutter.project_slug }}``.
